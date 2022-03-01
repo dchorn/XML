@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <plato fotografia="/fotos/arroz.jpg">
+        <nombre>Arroz</nombre>
+        <ingredients>
+            <ingredient>Arroz</ingredient>
+            <ingredient>Agua</ingredient>
+            <ingredient>Aceite de Oliva</ingredient>
+            <ingredient>Sal</ingredient>
+        </ingredients>
+        <pasos>
+            <paso>Lavar el Arroz</paso>
+            <paso>Poner el Arroz en una olla con agua</paso>
+            <paso>Hechar un chorrito de aceite y una pisca de sal</paso>
+            <paso>Poner la olla en el fuego medio y dejar hervir con la tapa puesta</paso>
+            <paso>Dejar hirviendo durante 10 minutos</paso>
+            <paso>Apagar el fuego y servir</paso>
+        </pasos>
+    </plato>
+    <plato>
+        <nombre>Huevos Revueltos</nombre>
+        <ingredients fotografia="/fotos/huevos.jpg">
+            <ingredient>Huevos</ingredient>
+            <ingredient>Mantequilla</ingredient>
+            <ingredient>Aceite de Oliva</ingredient>
+            <ingredient>Sal</ingredient>
+        </ingredients>
+        <pasos>
+            <paso>Batir 2 huevos con sal en una taza</paso>
+            <paso>Hechar un chorrito de aceite en una sarten</paso>
+            <paso>Poner la sarten a fuego medio</paso>
+            <paso>Cuando este caliente, poner una cucharada de mantequilla</paso>
+            <paso>Hechar los huevos en la sarten cuando la mantequilla este derretida</paso>
+            <paso>Remover hasta que este a tu gusto</paso>
+            <paso>Sacar de la sarten y servir</paso>
+        </pasos>
+    </plato>
+    <plato>
+        <nombre>Espaguetis</nombre>
+        <ingredients>
+            <ingredient>Espaguetis</ingredient>
+            <ingredient>Agua</ingredient>
+            <ingredient>Sal</ingredient>
+            <ingredient>Aceite de Oliva</ingredient>
+        </ingredients>
+        <pasos>
+            <paso>Hervir el agua en un olla</paso>
+            <paso>Hechar una pisca de sal y un poco de aceite y remover</paso>
+            <paso>Poner los espaguetis en la olla cuando el agua este hirviendo</paso>
+            <paso>Hervir los espaguetis durante 8 minutos, remover de vez en cuando</paso>
+            <paso>Escurrir el agua de los espaguetis</paso>
+            <paso>Poner los espaguetis en un plato y tirarle queso encima</paso>
+        </pasos>
+    </plato>
+    <plato fotografia="/fotos/arroz.jpg">
+        <nombre>Plato de Cereales</nombre>
+        <ingredients>
+            <ingredient>Cereales</ingredient>
+            <ingredient>Leceh</ingredient>
+        </ingredients>
+        <pasos>
+            <paso>Cogere un bol</paso>
+            <paso>Hechar los cereales dentro, usar cantidad que tu desees</paso>
+            <paso>Ponerle leche a gusto</paso>
+            <paso>Paso opcional: Calentarlos durante 2 minutos en el microondas</paso>
+        </pasos>
+    </plato>
+    <plato fotografia="/fotos/avena.jpg">
+        <nombre></nombre>
+        <ingredients>
+            <ingredient>Avena</ingredient>
+            <ingredient>Agua</ingredient>
+            <ingredient>Platano</ingredient>
+            <ingredient>Nueces</ingredient>
+            <ingredient>Miel</ingredient>
+            <ingredient>Canela</ingredient>
+        </ingredients>
+        <pasos>
+            <paso>Hervimos el agua en una olla</paso>
+            <paso>Hechar la avena cuando este hirviendo</paso>
+            <paso>Dejarla hirviendo durante 10 minutos</paso>
+            <paso>Trocear el platano</paso>
+            <paso>Poner la avena en un bol</paso>
+            <paso>Tirarle por encima el platano troceado, las nuces, la miel y la canela</paso>
+            <paso>Mesclarlo bien y a comer</paso>
+        </pasos>
+    </plato>
+</recetas>

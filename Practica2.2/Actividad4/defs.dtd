@@ -1,0 +1,36 @@
+<!ELEMENT Defs (ThingDef)*>
+<!ELEMENT ThingDef (defName,label,description,(statBases|pathCost)*,
+graphicData,(uiIconScale|hideAtSnowDepth|ingestible)*,plant)>
+<!ELEMENT statBases (MaxHitPoints,Flammability,Nutrition)>
+<!ELEMENT graphicData (textPath,(graphicClass|drawSize|shadowData)*)>
+<!ELEMENT shadowData (volume)>
+<!ELEMENT plant (fertilityMin|fertilitySensitivity|growDays|leaflessGraphicPath|harvestWork|
+maxMeshCount|visualSizeRange|topWindExposure|wildOrder|wildClusterRadius|wildClusterWeight)*>
+
+<!ELEMENT defName (#PCDATA)>
+<!ELEMENT label (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT MaxHitPoints (#PCDATA)>
+<!ELEMENT Flammability (#PCDATA)>
+<!ELEMENT Nutrition (#PCDATA)>
+<!ELEMENT volume (#PCDATA)>
+<!ELEMENT uiIconScale (#PCDATA)>
+<!ELEMENT growDays (#PCDATA)>
+<!ELEMENT leaflessGraphicPath (#PCDATA)>
+<!ELEMENT textPath (#PCDATA)>
+<!ELEMENT drawSize (#PCDATA)>
+<!ELEMENT graphicClass (#PCDATA)>
+<!ELEMENT hideAtSnowDepth (#PCDATA)>
+<!ELEMENT ingestible EMPTY>
+<!ELEMENT fertilityMin (#PCDATA)>
+<!ELEMENT fertilitySensitivity (#PCDATA)>
+<!ELEMENT harvestWork (#PCDATA)>
+<!ELEMENT maxMeshCount (#PCDATA)>
+<!ELEMENT visualSizeRange (#PCDATA)>
+<!ELEMENT topWindExposure (#PCDATA)>
+<!ELEMENT wildOrder (#PCDATA)>
+<!ELEMENT wildClusterRadius (#PCDATA)>
+<!ELEMENT wildClusterWeight (#PCDATA)>
+<!ELEMENT pathCost (#PCDATA)>
+
+<!ATTLIST ThingDef ParentName CDATA #REQUIRED>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<immobiliaria>
+    <pis codi="216632">
+        <direccion>Barrio de la Rivera 82, Barcelona</direccion>
+        <tipo_vivienda>Casa</tipo_vivienda>
+        <venta_o_alquiler>Alquiler</venta_o_alquiler>
+        <precio>134000</precio>
+    </pis>
+    <pis codi="348321">
+        <direccion>Calle Equador 12, Barcelona</direccion>
+        <tipo_vivienda>Piso</tipo_vivienda>
+        <venta_o_alquiler>Alquiler</venta_o_alquiler>
+        <precio>186000</precio>
+    </pis>
+    <pis codi="725431">
+        <direccion>Paseo de Gracia 23, Bacerlona</direccion>
+        <tipo_vivienda>Piso</tipo_vivienda>
+        <venta_o_alquiler>Venta</venta_o_alquiler>
+        <precio>150000</precio>
+    </pis>
+    <pis codi="456785">
+        <direccion>Las Ramblas 3, Barcelona</direccion>
+        <tipo_vivienda>Casa</tipo_vivienda>
+        <venta_o_alquiler>Venta</venta_o_alquiler>
+        <precio>270000</precio>
+    </pis>
+    <pis codi="687212">
+        <direccion>Carrer del Bisbe 156, Barcelona</direccion>
+        <tipo_vivienda>Piso</tipo_vivienda>
+        <venta_o_alquiler>Venta</venta_o_alquiler>
+        <precio>200000</precio>
+    </pis>
+</immobiliaria>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<estanteria>
+    <disco>
+        <autor>Gorillaz</autor>
+        <titulo>Humanz</titulo>
+        <genero>Alt-Rock</genero>
+        <numeroCanciones>9</numeroCanciones>
+    </disco>
+    <disco>
+        <autor>Die Antwoord</autor>
+        <titulo>Mount Ninji and Da Nice Time Kid </titulo>
+        <genero>Rap</genero>
+        <numeroCanciones>16</numeroCanciones>
+    </disco>
+    <disco>
+        <autor>Bring Me the Horizon</autor>
+        <titulo>Sempiternal </titulo>
+        <genero>Metalcore</genero>
+        <numeroCanciones>11</numeroCanciones>
+    </disco>
+</estanteria>

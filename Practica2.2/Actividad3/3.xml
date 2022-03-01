@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE juego SYSTEM "juego.dtd">
+<!-- juegoNoValido3-coordenadas-mal-puestas -->
+<juego dificultad="baja" nombre="Spore">
+    <personaje alien="si">
+        <nombre>Glub</nombre>
+        <vidas>3</vidas>
+        <armas>1</armas>
+        <herramientas>Destornillador</herramientas>
+        <superpoder />
+    </personaje>
+    <escenario>
+        <planeta>Marte</planeta>
+        <nombre_lugar>Delta</nombre_lugar>
+        <coordenadas>
+            <x>10</x>
+            <y>30</y>
+        </coordenadas>
+    </escenario>
+    <musica>
+        <nombre_cancion>Stereotype</nombre_cancion>
+        <genero>Metal</genero>
+    </musica>
+</juego>
