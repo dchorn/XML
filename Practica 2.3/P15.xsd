@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 <!--Definiciones de elementos simples-->
@@ -71,7 +71,6 @@
 </xs:element>
 
 
-
 <xs:element name="nombre" type="xs:string"/>
 <xs:element name="numero" type="xs:integer"/>
 <xs:element name="puerta" type="xs:string"/>
@@ -110,11 +109,16 @@
 <!-- Definiciones de elementos complejos-->
 
 <xs:element name="nacimiento">
-      <xs:complexType>
-            <xs:attribute ref="dia"></xs:attribute>
-            <xs:attribute ref="mes"></xs:attribute>
-            <xs:attribute ref="anyo"></xs:attribute>
-      </xs:complexType>
+<xs:complexType>
+      <xs:simpleContent>
+            <xs:extension base="xs:date">
+                  <xs:attribute ref="dia"></xs:attribute>
+                  <xs:attribute ref="mes"></xs:attribute>
+                  <xs:attribute ref="anyo"></xs:attribute>
+            </xs:extension>
+      </xs:simpleContent>
+
+</xs:complexType>
 </xs:element>
 
 <xs:element name="direccion">
