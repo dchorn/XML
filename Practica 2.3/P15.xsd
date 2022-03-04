@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!--Definiciones de elementos simples-->
+
+<xs:element name="nif">
+      <xs:simpleType>
+            <xs:restriction base="xs:string">
+                  <xs:pattern value="[0-9]{8}-[A-Z]{1}"></xs:pattern>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:element>
+
+<xs:element name="telefono" >
+      <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                  <xs:pattern value="[0-9]{9}"></xs:pattern>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:element>
+
+<xs:element name="codigo_postal">
+      <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                  <xs:pattern value="[0-9]{5}"></xs:pattern>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:element>
+
+<xs:element name="piso">
+      <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="2"></xs:totalDigits>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:element>
+
+<xs:element name="tipo_via">
+      <xs:simpleType>
+            <xs:restriction base="xs:string">
+                  <xs:pattern value="Avenida|Calle|Plaza"></xs:pattern>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:element>
+
+<xs:element name="via">
+      <xs:simpleType>
+            <xs:restriction base="xs:string">
+                  <xs:minLength value="1"></xs:minLength>
+                  <xs:maxLength value="100"></xs:maxLength>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:element>
+
+<xs:element name="poblacion">
+      <xs:simpleType>
+            <xs:restriction base="xs:string">
+                  <xs:minLength value="1"></xs:minLength>
+                  <xs:maxLength value="100"></xs:maxLength>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:element>
+
+<xs:element name="apellidos">
+      <xs:simpleType>
+            <xs:restriction base="xs:string">
+                  <xs:enumeration value="Gutierrez Garcia"></xs:enumeration>
+                  <xs:enumeration value="Moreno Perez"></xs:enumeration>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:element>
+
+
+
+<xs:element name="nombre" type="xs:string"/>
+<xs:element name="numero" type="xs:integer"/>
+<xs:element name="puerta" type="xs:string"/>
+<xs:element name="hombre" type="xs:string" default="hombre"/>
+<xs:element name="mujer" type="xs:string" default="mujer"/>
+
+
+
+<!--Definiciones de atributos-->
+
+<xs:attribute name="dia">
+      <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger">
+                  <xs:minInclusive value="1"></xs:minInclusive>
+                  <xs:maxInclusive value="31"></xs:maxInclusive>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="mes">
+      <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="anyo">
+      <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger">
+                  <xs:minInclusive value="1900"></xs:minInclusive>
+                  <xs:maxInclusive value="2016"></xs:maxInclusive>
+            </xs:restriction>
+      </xs:simpleType>
+</xs:attribute>
+
+
+<!-- Definiciones de elementos complejos-->
+
+<xs:element name="nacimiento">
+      <xs:complexType>
+            <xs:attribute ref="dia"></xs:attribute>
+            <xs:attribute ref="mes"></xs:attribute>
+            <xs:attribute ref="anyo"></xs:attribute>
+      </xs:complexType>
+</xs:element>
+
+<xs:element name="direccion">
+      <xs:complexType>
+            <xs:sequence>
+                  <xs:element ref="tipo_via"></xs:element>
+                  <xs:element ref="via"></xs:element>
+                  <xs:element ref="numero"></xs:element>
+                  <xs:element ref="piso"></xs:element>
+                  <xs:element ref="puerta" minOccurs="0"></xs:element>
+                  <xs:element ref="poblacion"></xs:element>
+                  <xs:element ref="codigo_postal"></xs:element>
+            </xs:sequence>
+      </xs:complexType>
+</xs:element>
+
+<xs:element name="contacto">
+      <xs:complexType>
+            <xs:sequence>
+                  <xs:element ref="nombre"></xs:element>
+                  <xs:element ref="apellidos"></xs:element>
+                  <xs:choice>
+                        <xs:element ref="hombre"></xs:element>
+                        <xs:element ref="mujer"></xs:element>
+                  </xs:choice>
+                  <xs:element ref="nacimiento"></xs:element>
+                  <xs:element ref="nif"></xs:element>
+                  <xs:element ref="telefono" maxOccurs="2"></xs:element>
+                  <xs:element ref="direccion"></xs:element>
+            </xs:sequence>
+
+      </xs:complexType>
+</xs:element>
+
+<xs:element name="agenda">
+      <xs:complexType>
+            <xs:sequence>
+                  <xs:element ref="contacto" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+      </xs:complexType>
+</xs:element>
+
+</xs:schema>
