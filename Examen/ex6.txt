@@ -1,0 +1,1 @@
+<xs:pattern value="vermell|blau|negre|blanc"></xs:pattern>

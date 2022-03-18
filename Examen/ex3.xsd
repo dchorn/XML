@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- ======================================================== -->
+<!--               Definiciones de elementos simples          -->
+<!-- ======================================================== -->
+
+<xs:element name="nombre" type="xs:string"/>
+<xs:element name="vidas">
+    <xs:simpleType>
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="[1-9]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+<xs:element name="armas" type="xs:string"/>
+<xs:element name="herramientas" type="xs:string"/>
+
+<xs:element name="planeta" type="xs:string"/>
+<xs:element name="nombre_lugar" type="xs:string"/>
+<xs:element name="x" type="xs:integer"/>
+<xs:element name="y" type="xs:integer"/>
+<xs:element name="z" type="xs:integer"/>
+
+<xs:element name="nombre_cancion" type="xs:string"/>
+<xs:element name="genero" type="xs:string"/>
+
+
+<!-- ======================================================== -->
+<!--                  Definiciones de atributos               -->
+<!-- ======================================================== -->
+
+<xs:attribute name="nombre"></xs:attribute>
+<xs:attribute name="dificultad">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="alta|baja"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+<xs:attribute name="descripcion"></xs:attribute>
+
+<!-- ======================================================== -->
+<!--           Definiciones de elementos complejos            -->
+<!-- ======================================================== -->
+
+<xs:element name="superpoder">
+    <xs:complexType>
+        <xs:attribute ref="descripcion" use="optional"></xs:attribute>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="coordenadas">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="x"></xs:element>
+            <xs:element ref="y"></xs:element>
+            <xs:element ref="z"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="musica">
+    <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+            <xs:element ref="nombre_cancion" maxOccurs="unbounded"></xs:element>
+            <xs:element ref="genero" maxOccurs="unbounded"></xs:element>
+        </xs:choice>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="escenario">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="planeta"></xs:element>
+            <xs:element ref="nombre_lugar"></xs:element>
+            <xs:element ref="coordenadas"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="personaje">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="nombre"></xs:element>
+            <xs:element ref="vidas"></xs:element>
+            <xs:element ref="armas" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element ref="herramientas"></xs:element>
+            <xs:element ref="superpoder" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="juego">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="personaje" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            <xs:element ref="escenario"></xs:element>
+            <xs:element ref="musica"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="nombre" use="required"></xs:attribute>
+        <xs:attribute ref="dificultad" use="optional"></xs:attribute>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="ex3">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="juego" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- <xs:element name="ex3"></xs:element> -->
+
+</xs:schema>

@@ -1,0 +1,31 @@
+﻿
+<xs:element name="ElementoSimple">
+  <xs:simpleType>
+    <xs:restriction base="xs:Tipo">
+        Restricciones...
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<xs:element name="ElementoSimple type="xs:Tipo"/>
+
+
+<xs:attribute name="AtributoSimple"/>
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]+"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+
+<xs:attribute name="AtributoSimple type="xs:Tipo"/>
+
+
+<xs:element name="ElementoComplejo">
+  <xs:complexType>
+    Atributos...
+    <xs:sequence> O bien all o bien choice
+      Sequencia de elementos...(O ninguno si está vacío)
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:element>

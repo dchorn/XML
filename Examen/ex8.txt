@@ -1,0 +1,1 @@
+<xs:pattern value="[A-ZÁ-Ź][a-zá-ź]+"></xs:pattern>

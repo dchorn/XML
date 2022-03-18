@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Muebles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="Muebles.xsd">
+  <Mueble Color="Negro">
+    <Tipo>Sofá</Tipo>
+    <x>1.2</x>
+    <y>3.2</y>
+    <z></z>
+  </Mueble>
+</Muebles>

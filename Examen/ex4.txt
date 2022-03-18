@@ -1,0 +1,1 @@
+<xs:pattern value="Aros|Eros|Iros|Oros|Uros"></xs:pattern>

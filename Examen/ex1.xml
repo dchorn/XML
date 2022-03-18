@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Supercomputador>
+  <Nodo id="1">
+    <Memoria>
+      <RAM>15GB</RAM>
+      <Tecnología>DDR3</Tecnología>
+    </Memoria>
+    <Almacenamiento>
+      <HDD>200TB</HDD>
+      <SSD>40TB</SSD>
+      <Lleno/>
+    </Almacenamiento>
+    <Procesador>
+      <Modelo>
+        <Fabricante>Intel</Fabricante>
+        <Gama>i9</Gama>
+      </Modelo>
+      <Hz>3500</Hz>
+    </Procesador>
+  </Nodo>
+  <Nodo id="2">
+    <Memoria>
+      <RAM>30GB</RAM>
+      <Tecnología>DDR4</Tecnología>
+    </Memoria>
+    <Almacenamiento>
+      <HDD>0GB</HDD>
+      <SSD>200TB</SSD>
+      <Vacío/>
+    </Almacenamiento>
+    <Procesador>
+      <Modelo>
+        <Fabricante>Intel</Fabricante>
+        <Gama>i7</Gama>
+      </Modelo>
+      <Hz>>4700</Hz>
+    </Procesador>
+  </Nodo>
+</Supercomputador>

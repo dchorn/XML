@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!--Definiciones de elementos simples-->
+<xs:element name="Tipo">
+<xs:simpleType>
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[a-zA-Záóéíóú]*"/>
+  </xs:restriction>
+</xs:simpleType>
+</xs:element>
+
+<xs:element name="x" type="xs:string"/>
+<xs:element name="y" type="xs:string"/>
+<xs:element name="z" type="xs:float" fixed="2"/>
+
+<!--Definiciones de atributos-->
+<xs:attribute name="Color">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="Rojo|Azul"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+<!--<xs:attribute name="Color" type="xs:string"/>-->
+
+<!--Definiciones de elementos complejos-->
+<xs:element name="Mueble">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="Tipo"/>
+      <xs:element ref="x"/> <!--<xs:element name="x" type="xs:string"> -->
+      <xs:element ref="y"/>
+      <xs:element ref="z"/>
+    </xs:sequence>
+    <xs:attribute ref="Color" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Muebles">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="Mueble"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>
